@@ -1,0 +1,3 @@
+GLText what the fuck moments:
+- ??? Stores font text data in hex, which then gets converted into a grid in binary
+- ??? Then, it would be too simple if the grid itself was the entire texture. Instead, he then combines each texture with another one, interpolating the data to figure out whether each pixel is text, a shadow, or clear. 
