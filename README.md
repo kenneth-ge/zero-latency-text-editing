@@ -1,3 +1,5 @@
+## low latency text editor...
+
 So, Google Docs sucks. At least, when it comes to keyboard latency. In fact, on my slow potato of a laptop, Google Docs is so slow that it struggles to keep up with my typing, and I can see text appearing on my screen noticeably after typing it on my keyboard. 
 
 But, while this keyboard lag is better in other word processors, like Microsoft Word or even your classic text editor, no matter where you go, it's still kind of mid. In fact, because of all the extra features and complexity we're adding to our software, [keyboard latency is actually worse now than it was for the Apple IIe](https://danluu.com/keyboard-latency/). Yikes. 
