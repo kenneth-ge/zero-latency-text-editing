@@ -1,4 +1,4 @@
-# zero-latency-text-editing
+![image](https://github.com/kenneth-ge/zero-latency-text-editing/assets/57784063/6ab73aa5-ae84-49af-a574-4b0ec97a6552)# zero-latency-text-editing
 
 So, Google Docs sucks. At least, when it comes to keyboard latency. In fact, on my slow potato of a laptop, Google Docs is so slow that it struggles to keep up with my typing, and I can see text appearing on my screen noticeably after typing it on my keyboard. 
 
@@ -8,9 +8,18 @@ And sometimes, this performance tax we pay doesn't even give us useful features.
 
 Can we do better?
 
+![image](https://github.com/kenneth-ge/zero-latency-text-editing/assets/57784063/3edac1c0-64fa-47a3-90b8-9462ceceffae)
+
 With this project, I attempted to go pretty low-level (as far as I could reasonably go before hitting kernel space!), to see if I could hit the theoretical limit for how fast typing can get. I know, my wrists are destroyed too. But it was worth it!
 
+## How does this work:
+* Single buffering -- to delete, we scissor a small region. To add, we simply stamp our character
+* Font glyph caching -- generating a ton of font glyphs all at once, cache them for later instead of rerendering like many other projects seem to do
+* O(1) data structures to store and handle text
+* Single-threaded -- asynchronous events introduce latency. The caret doesn't blink for this reason (and I wonder if the Sublime caret doesn't blink for this reason as well)
+* Low-level languages and libraries (FreeType, OpenGL, C++)
 
+Note that the retro font is not at all related to performance -- just thought it would be cool :P
 
 ## Features that need development:
 * Word wrapping
